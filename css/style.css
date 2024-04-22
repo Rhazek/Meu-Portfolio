@@ -253,6 +253,20 @@ li{
     
 }
 
+.rodape{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #022e28;
+    align-items: center;
+    gap: 15px;
+    padding: 1.5% 7% 2% 7%;
+}
 
+.rodape img{
+    width: 130px;
+    padding-bottom: 5px;
+}
 
-
+.rodape p{
+    font-family: var(--fonte-primaria);
+}
