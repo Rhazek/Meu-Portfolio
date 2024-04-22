@@ -19,6 +19,7 @@ body{
     background-image: radial-gradient(circle at 0 0,#303636 2px,transparent 0),radial-gradient(circle at 0 0,#303636 2px,transparent 0);
     background-size: 30px 30px;
     background-position: 0 0,10px 10px;
+    height: 100vh;
 }
 
 .img-fluid{
@@ -58,6 +59,8 @@ body{
     height: 2px;
     display: block;
     background-color: var(--cor-terciaria);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .cabecalho__menu__link:hover::after{
@@ -72,6 +75,36 @@ body{
     color: var(--cor-terciaria);
 }
 
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    align-content: center;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
+}
+
+.dropdown_menu.open{
+    height: 180px;
+}
+
+.dropdown_menu a{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .cabecalho__menu__link:hover::after{
+    width: 0;
+}
 
 .titulo-destaque{
     color: var(--cor-terciaria);
@@ -82,7 +115,14 @@ body{
     font-weight: 500;
 }
 
-
+.toggle_btn{
+    display: flex;
+    align-content: center;
+    cursor: pointer;
+    width: 25px;
+    stroke: white;
+    display: none;
+}
 
 .apresentacao {
     margin: 3% 7%;
@@ -269,4 +309,51 @@ li{
 
 .rodape p{
     font-family: var(--fonte-primaria);
+}
+
+@media (max-width: 992px){
+    .cabecalho__menu__links{
+        display: none;
+    }
+
+    .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        top: 10%;
+        display: block;
+    }
+
+    .logo_habilidade{
+        width: 200px;
+    }
+
+    .habilidades__cards::before, .habilidades__cards::after {
+        height: 260px;
+    }
+}
+
+@media (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+    .logo_habilidade{
+        width: 150px;
+    }
+
+    .habilidades__cards::before, .habilidades__cards::after {
+        height: 220px;
+    }
+
+    @keyframes slide {
+        from{
+            transform: translateX(0);
+        } to {
+            transform: translateX(-441%);
+        }
+        
+    }
 }
