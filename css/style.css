@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 
 :root{
     --cor-primaria: #000000;
@@ -8,17 +10,24 @@
     --cor-quaternaria: #23252A;
     --cor-hover: #272727;
 
-    --fonte-primaria: 'Inter', sans-serif;
-    --fonte-secundaria: 'Lora', sans-serif;
+    --fonte-primaria: 'Source Sans Pro', sans-serif;
+    --fonte-secundaria: 'Source Code Pro', monospace;
+    --fw-reg: 300;
+    --fw-medium: 600;
+    --fw-bold: 900;
+
+    --fs-h1: 3.6rem;
+    --fs-h2: 2.8rem;
+    --fs-h3: 1.5rem;
 }
 
 body{
     background-color: #070707;
     box-sizing: border-box;
     color: var(--cor-secundaria);
-    background-image: radial-gradient(circle at 0 0,#303636 2px,transparent 0),radial-gradient(circle at 0 0,#303636 2px,transparent 0);
+    /* background-image: radial-gradient(circle at 0 0,#303636 2px,transparent 0),radial-gradient(circle at 0 0,#303636 2px,transparent 0);
     background-size: 30px 30px;
-    background-position: 0 0,10px 10px;
+    background-position: 0 0,10px 10px; */
     height: 100vh;
 }
 
@@ -129,7 +138,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap: 82px;  
 }
 
@@ -148,20 +156,25 @@ body{
     gap: 45px;
 }
 
+.apresentacao__conteudo__tituloComImagem{
+    display: flex;
+    max-width: 700px;
+}
+
 .apresentacao__conteudo__titulo{
     position: relative;
     font-size: 5rem;
     font-weight: 600;
-    font-family: var(--fonte-secundaria);
+    font-family: var(--fonte-primaria);
     z-index: 1;
-    line-height: 1.25;
+    line-height: 1.15;
     margin-top: 50px;
 }
 
 .apresentacao__conteudo__elipse{
     position: absolute;
-    top: 47%;
-    left: 35%;
+    padding-top: 24.5em;
+    padding-left: 41em;
     transform: translate(-50%, -50%);
     z-index: 0;
 }
@@ -194,7 +207,7 @@ body{
     color: var(--cor-terciaria);
     text-align: center;
     font-family: var(--fonte-primaria);
-    font-weight: 600;
+    font-weight: var(--fw-bold);
     font-size: 1.25rem;
     text-decoration: none;
     padding: 12px 0;
@@ -221,8 +234,22 @@ body{
     right: -150px;
 }
 
+
+
 .habilidades{
     max-width: 100%;
+    position: relative;
+}
+
+#tsparticles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	z-index: 0;
 }
 
 .habilidades__titulo{
@@ -230,8 +257,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 3.2rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-family: var(--fonte-primaria);
+    font-weight: var(--fw-bold);
     color: var(--cor-terciaria);
 }
 
