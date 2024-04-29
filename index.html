@@ -21,6 +21,9 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
 
 <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
@@ -254,7 +257,7 @@
             </div>
           </div>
           <div class="row" id="cardRow">
-            <div class="col-md-6">
+            <div class="col-md-6 card-projeto">
               <div class="work-box">
                 <a href="https://rhazek.github.io/Drum_kit/">
                   <div class="work-img">
@@ -287,7 +290,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6" style="margin-top: 455px;">
+            <div class="col-md-6 card-projeto" style="margin-top: 455px;">
               <div class="work-box">
                 <a href="https://rhazek.github.io/Dicee_Challenge/">
                   <div class="work-img">
@@ -320,7 +323,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 card-projeto">
               <div class="work-box">
                 <a href="https://tindog-xi-eight.vercel.app">
                   <div class="work-img">
@@ -352,9 +355,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6" style="margin-top: 435px;">
+            <div class="col-md-6 card-projeto" style="margin-top: 435px;">
               <div class="work-box">
-                <a href="https://tindog-xi-eight.vercel.app">
+                <a href="https://rhazek.github.io/Simon-Game/">
                   <div class="work-img">
                     <img
                       src="https://user-images.githubusercontent.com/50714597/159590767-7aef7042-5657-4e0d-97bc-ae6ca41ab23c.gif"
@@ -400,7 +403,8 @@
         
         <!-- Left contact page --> 
           
-          <form id="contact-form" class="form-horizontal" role="form">
+          <form id="contact-form" class="form-horizontal" role="form" method="post" action="https://api.staticforms.xyz/submit">
+            <input type="hidden" name="accessKey" value="c4101cbe-302b-4693-8046-b75280abfc3c">
              
             <div class="form-group">
               <div class="col-sm-12">
@@ -414,7 +418,7 @@
               </div>
             </div>
       
-            <textarea class="form-control" rows="10" placeholder="Mensagem" name="message" required></textarea>
+            <textarea class="form-control" rows="10" id="message" placeholder="Mensagem" name="message" required></textarea>
             
             <button class="btn send-button" id="submit" type="submit" value="SEND">
               <div class="alt-send-button">
@@ -422,7 +426,8 @@
               </div>
             
             </button>
-            
+
+
           </form>
           
         <!-- Left contact page --> 
@@ -440,7 +445,7 @@
       
               <hr>
               <ul class="social-media-list">
-                <li><a href="#" target="_blank" class="contact-icon">
+                <li><a href="wa.me/5598991506026" target="_blank" class="contact-icon">
                   <i class="bi bi-whatsapp"></i></a>
                 </li>
                 <li><a href="https://github.com/rhazek" target="_blank" class="contact-icon">

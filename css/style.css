@@ -650,6 +650,7 @@ li{
         font-size: 10vw;
     }
 
+
     .projetos{
         grid-template-columns: repeat(2, 1fr); 
     }
@@ -683,6 +684,20 @@ li{
       }
 }
 
+@media (max-width: 768px){
+
+  #cardRow{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+.card-projeto{
+margin-top: 0 !important; 
+}
+
+}
+
 @media (max-width: 576px){
     
 
@@ -696,8 +711,42 @@ li{
         grid-template-columns: repeat(1, 1fr); 
     }
 
+    .apresentacao__conteudo{
+      width: 100%;
+    }
+
+    .apresentacao__cont{
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    .apresentacao__conteudo__tituloComImagem{
+      justify-content: center;
+    }
+
+    .apresentacao__conteudo__elipse{
+      display: none;
+    }
+
+    .apresentacao__conteudo__titulo{
+      font-size: 15vw;
+  }
+
+    .apresentacao__conteudo__texto{
+      text-align: center;
+    }
+
+    .apresentacao__imagem{
+      width: 80%;
+      align-self: center;
+    }
+
     .logo_habilidade{
         width: 150px;
+    }
+
+    .habilidades__cards{
+      height: 190px;
     }
 
     .habilidades__cards::before, .habilidades__cards::after {
