@@ -817,6 +817,19 @@ margin-top: 0 !important;
       .contact-text {
         font: 300 16px var(--fonte-primaria);
       }
+
+      .place {
+        margin-left: 47px;
+      }
+      
+      .phone {
+        margin-left: 39px;
+      }
+      
+      .gmail {
+        margin-left: 33px;
+      }
+      
 }
 
 /* .spaces{
