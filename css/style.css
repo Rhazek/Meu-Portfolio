@@ -406,10 +406,12 @@ li{
     display: inline-block;
     background-color: var(--cor-terciaria); /* Cor de fundo da etiqueta */
     color: var(--cor-quaternaria); /* Cor do texto da etiqueta */
+    font-size: 16px;
     padding: 5px 12px;
     font-weight: var(--fw-medium);
     border-radius: 20px;
     margin-right: 5px; /* Espaçamento entre as etiquetas */
+    margin-top: 5px;
 }
 
 .col-sm-8 {
@@ -611,6 +613,7 @@ li{
   
   hr {
     border-color: rgba(255,255,255,.6);
+    margin: 1rem 0;
   }
 
 
@@ -734,10 +737,14 @@ li{
         float: none;
         margin: 0 auto;
       }  
-      .form-control, textarea {
-        
+    .form-control, textarea {
+        max-width: 400px;
         margin: 0 auto;
-      }
+    }
+
+    .send-button{
+        max-width: 400px;
+    }
      
       
       .name, .email, textarea {
