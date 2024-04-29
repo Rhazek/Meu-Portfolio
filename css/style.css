@@ -349,7 +349,6 @@ li{
 
   
   .work-box {
-    margin-bottom: 3rem;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background-color: var(--cor-quaternaria);
@@ -574,20 +573,6 @@ li{
     transition: all .2s ease-in-out;
   }
   
-  .social-media-list li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px var(--cor-terciaria);
-    transition: all .2s ease-in-out;
-  }
-  
   .social-media-list li:hover {
     background-color: var(--cor-terciaria); 
   }
@@ -600,14 +585,11 @@ li{
   
   .social-media-list li:hover a {
     color: var(--cor-primaria);
+    height: 0px;
+    width: 0px;
+    padding: 19px;
   }
   
-  .copyright {
-    font: 200 14px var(--fonte-secundaria);
-    color: var(--cor-secundaria);
-    letter-spacing: 1px;
-    text-align: center;
-  }
   
   hr {
     border-color: rgba(255,255,255,.6);

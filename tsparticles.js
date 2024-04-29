@@ -5,7 +5,7 @@ tsParticles.load("tsparticles", {
     },
     particles: {
       number: {
-        value: 60,
+        value: 100,
       },
       color: { value: ["#def2f1", "#25dbd2", "#095350", "#16f8ed"] },
       opacity: {
