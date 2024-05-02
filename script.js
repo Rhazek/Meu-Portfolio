@@ -33,32 +33,25 @@ document
     event.preventDefault();
   });
 
-//outra coisa  
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll('.cabecalho__menu__link');
 
-// Obtém a posição final do último card
-var lastCardPosition = document
-  .querySelector("#cardRow")
-  .lastElementChild.getBoundingClientRect().bottom;
-console.log(lastCardPosition);
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
 
-// Encontra todas as linhas
-var rows = document.querySelectorAll(".row");
-console.log(rows);
+      if (targetSection) {
+        const headerHeight = document.querySelector('.cabecalho').offsetHeight;
+        const targetPosition = targetSection.offsetTop - headerHeight;
 
-// Procura a próxima linha após #cardRow
-var nextRow = null;
-for (var i = 0; i < rows.length; i++) {
-  if (rows[i].id === "cardRow") {
-    nextRow = rows[i + 1];
-    break;
-  }
-}
-
-if (nextRow) {
-  // Define a margem superior do primeiro col-md-6 do próximo elemento de linha
-  var nextCol = nextRow.querySelector(".col-md-6");
-  console.log(nextCol);
-  if (nextCol) {
-    nextCol.style.marginTop = "-" + lastCardPosition + "px";
-  }
-}
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
