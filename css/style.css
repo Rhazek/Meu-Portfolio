@@ -715,9 +715,7 @@ margin-top: 0 !important;
 @media (max-width: 576px){
 
   .cabecalho{
-    position: fixed;
     background-color: var(--cor-primaria);
-    width: 100%;
     top: 0;
     z-index: 500;
   } 
@@ -795,6 +793,10 @@ margin-top: 0 !important;
             transform: translateX(-441%);
         }
         
+    }
+
+    #cardRow{
+      overflow: hidden;
     }
 
     .direct-contact-container, .form-wrapper {
