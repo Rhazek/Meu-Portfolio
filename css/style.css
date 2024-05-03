@@ -460,6 +460,7 @@ li{
     color: var(--cor-secundaria);
     letter-spacing: 1px;
     color: var(--cor-secundaria);
+    border-radius: 8px;
   }
 
   .form-control:focus {
