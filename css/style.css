@@ -650,10 +650,10 @@ li{
     }
 
     .dropdown_menu{
-        top: 10%;
         display: block;
+        top: 66px;
+        right: 7%;
     }
-
     
     .apresentacao__conteudo__titulo{
         font-size: 8vw;
@@ -716,16 +716,13 @@ margin-top: 0 !important;
 @media (max-width: 576px){
 
   .cabecalho{
-    position: fixed;
     background-color: var(--cor-primaria);
-    width: 100%;
     top: 0;
     z-index: 500;
   } 
 
     .dropdown_menu{
         left: 2rem;
-        top: 66px;
         width: unset;
     }
 
@@ -796,6 +793,10 @@ margin-top: 0 !important;
             transform: translateX(-441%);
         }
         
+    }
+
+    #cardRow{
+      overflow: hidden;
     }
 
     .direct-contact-container, .form-wrapper {
