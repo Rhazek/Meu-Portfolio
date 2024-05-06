@@ -23,9 +23,6 @@ body {
   box-sizing: border-box;
   color: var(--cor-secundaria);
   font-family: var(--fonte-primaria);
-  /* background-image: radial-gradient(circle at 0 0,#303636 2px,transparent 0),radial-gradient(circle at 0 0,#303636 2px,transparent 0);
-    background-size: 30px 30px;
-    background-position: 0 0,10px 10px; */
   height: 100vh;
 }
 
@@ -104,6 +101,7 @@ body {
   height: 0;
   width: 300px;
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(70px);
   backdrop-filter: blur(70px);
   transform: translate3d(0, 0, 0);
   border-radius: 10px;
@@ -227,6 +225,7 @@ body {
   text-decoration: none;
   padding: 12px 0;
   border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave */
 }
 
 .link1 {
@@ -236,13 +235,14 @@ body {
 }
 
 .apresentacao__links__link:hover {
-  background-color: var(--cor-hover);
+  background-color: var(--cor-terciaria);
+  color: var(--cor-primaria);
   text-decoration: none;
-  color: #12f7d6;
 }
 
 .link1:hover {
   background-color: var(--cor-primaria);
+  color: var(--cor-terciaria);
 }
 
 .apresentacao__imagem {
@@ -413,6 +413,10 @@ li {
   margin-top: 5px;
 }
 
+.etiqueta:hover {
+  box-shadow: var(--cor-terciaria) 1px 1px 15px -5px;
+}
+
 .col-sm-8 {
   width: 100%;
 }
@@ -431,8 +435,7 @@ li {
 }
 
 .link3:hover {
-  background-color: var(--cor-terciaria);
-  color: var(--cor-primaria);
+  box-shadow: var(--cor-terciaria) 1px 1px 25px -10px;
 }
 
 /* CONTAT0 */
@@ -473,7 +476,6 @@ textarea {
 
 .form-control:focus {
   background-color: var(--cor-primaria);
-  /* box-shadow: inset 0 12px 2px var(--cor-terciaria);     */
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--cor-terciaria);
   color: var(--cor-secundaria);
 }
@@ -490,7 +492,6 @@ textarea {
 .alt-send-button {
   transition: all 0.2s ease-in-out;
   color: var(--cor-primaria);
-  border: var(--cor-terciaria);
 }
 
 .send-text {
@@ -503,9 +504,14 @@ textarea {
 .alt-send-button:hover {
   transform: translate3d(0px, -29px, 0px);
   background-color: var(--cor-primaria);
-  border: 2px var(--cor-terciaria);
   color: var(--cor-terciaria);
 }
+
+.send-button:hover{
+  border: 1px solid var(--cor-terciaria);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--cor-terciaria);
+}
+
 
 /* Begin Right Contact Page */
 .direct-contact-container {
