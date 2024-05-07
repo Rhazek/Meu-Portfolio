@@ -222,7 +222,7 @@ body {
   font-family: var(--fonte-primaria);
   font-weight: var(--fw-bold);
   font-size: 1.25rem;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 12px 0;
   border-radius: 50px;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave */
@@ -239,6 +239,10 @@ body {
   background-color: var(--cor-terciaria);
   color: var(--cor-primaria);
   text-decoration: none;
+}
+
+.apresentacao__links__link:active{
+  text-decoration: none !important;
 }
 
 .link1:hover {
@@ -340,7 +344,9 @@ li {
 .link3 {
   width: 250px;
   margin: 30px auto 0;
+  color: var(--cor-terciaria) !important;
 }
+
 
 #projetos {
   position: relative;
@@ -442,10 +448,12 @@ li {
 .link4 {
   width: 250px;
   margin: 50px auto 0;
+  color: var(--cor-terciaria) !important;
 }
 
 .link3:hover, .link4:hover {
   box-shadow: var(--cor-terciaria) 1px 1px 25px -10px;
+  color: var(--cor-primaria) !important;
 }
 
 /* CONTAT0 */
