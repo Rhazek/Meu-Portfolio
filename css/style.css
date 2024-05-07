@@ -226,6 +226,7 @@ body {
   padding: 12px 0;
   border-radius: 50px;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave */
+  z-index: 50;
 }
 
 .link1 {
@@ -277,12 +278,16 @@ li {
   list-style: none;
 }
 
+#habilidades .secao__titulo{
+  margin-bottom: 30px;
+}
+
 .habilidades__cards {
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  height: 400px;
+  height: 350px;
 }
 
 .habilidades__cards ul {
@@ -296,7 +301,7 @@ li {
 .habilidades__cards::after {
   background: linear-gradient(to right, #080c13 10%, rgba(0, 0, 0, 0) 100%);
   content: "";
-  height: 400px;
+  height: 350px;
   position: absolute;
   width: 100px;
   z-index: 2;
@@ -330,6 +335,11 @@ li {
   to {
     transform: translateX(-165.5%);
   }
+}
+
+.link3 {
+  width: 250px;
+  margin: 30px auto 0;
 }
 
 #projetos {
@@ -429,12 +439,12 @@ li {
   box-shadow: var(--cor-terciaria) 0px 5px 18px -10px;
 }
 
-.link3 {
+.link4 {
   width: 250px;
   margin: 50px auto 0;
 }
 
-.link3:hover {
+.link3:hover, .link4:hover {
   box-shadow: var(--cor-terciaria) 1px 1px 25px -10px;
 }
 
@@ -681,6 +691,10 @@ hr {
     width: 200px;
   }
 
+  .habilidades__cards{
+    height: 280px;
+  }
+
   .habilidades__cards::before,
   .habilidades__cards::after {
     height: 260px;
@@ -717,7 +731,7 @@ hr {
     margin-top: 0 !important;
   }
 
-  .link3 {
+  .link4 {
     margin: 20px auto 0;
   }
 }
@@ -802,6 +816,10 @@ hr {
     to {
       transform: translateX(-441%);
     }
+  }
+
+  .link3{
+    margin-top: 40px;
   }
 
   #cardRow {
