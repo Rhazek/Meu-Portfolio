@@ -43,6 +43,13 @@ body {
   padding-bottom: 3px;
 }
 
+.cabecalho__menu__logo a img:hover{
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+
 .navbar {
   margin-bottom: auto;
   border: 0;
@@ -251,8 +258,19 @@ body {
 }
 
 .apresentacao__imagem {
-  width: 41%;
+  width: 39%;
   right: -150px;
+  overflow: hidden;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .habilidades {
@@ -337,7 +355,7 @@ li {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-165.5%);
+    transform: translateX(-186%);
   }
 }
 
@@ -796,6 +814,7 @@ hr {
     align-self: center;
   }
 
+
   .secao__titulo {
     font-size: calc(var(--fs-h2) - 50%);
   }
@@ -827,7 +846,7 @@ hr {
   }
 
   .link3{
-    margin-top: 40px;
+    margin-top: 80px;
   }
 
   #cardRow {
@@ -889,41 +908,3 @@ hr {
     margin-left: 33px;
   }
 }
-
-/* .spaces{
-    position: absolute;
-    width: 100%;
-    order: 1;
-}
-
-.wave-spacer {
-	aspect-ratio: 960 / 200;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
-
-.wave-base-to-black {
-	background-image: url('/imagens/Spaces/wave-base-black.svg');
-}
-
-.wave-black-to-base {
-	background-image: url('/imagens/Spaces/wave-black-base.svg');
-}
-
-.wave-spacer-narrow {
-	aspect-ratio: 960 / 100;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
-
-.wave-base-to-black-narrow {
-	background-image: url('/imagens/Spaces/wave-base-black-narrow.svg');
-}
-
-.wave-black-to-base-narrow {
-	background-image: url('/imagens/Spaces/wave-black-base-narrow.svg');
-} */
